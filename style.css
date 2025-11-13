@@ -1,4 +1,4 @@
-/* Reset default margins and paddings */
+/*  default margins and paddings */
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ header {
   color: #ff4da6;
 }
 
-/* ===== Menu Toggle (3 lines icon) ===== */
+/* ===== Menu Toggle  ===== */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -86,4 +86,47 @@ header {
   .menu-toggle {
     display: flex;
   }
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #fff;
+  padding: 0 20px;
+}
+
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+  color: #ff4da6;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #1e90ff; 
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #63b3ed; 
 }
