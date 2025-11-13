@@ -1,78 +1,89 @@
-/* Navbar */
-body {
-  background-color: lightblue;
-}
-body {
+/* Reset default margins and paddings */
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+
+/* ===== Navbar Styles ===== */
+header {
+  width: 100%;
+  background: #ffdee9;
+  background: linear-gradient(90deg, #ffdee9 0%, #b5fffc 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 20px 60px;
 }
 
-.navbar .logo {
-  font-size: 24px;
+.logo {
+  font-size: 1.8rem;
   font-weight: bold;
+  color: #333;
 }
 
-.navbar .nav-links {
-  list-style: none;
+.nav-links {
   display: flex;
-  gap: 25px;
+  list-style: none;
 }
 
-.navbar .nav-links li a {
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.navbar .nav-links li a:hover {
-  color: #ff4081; /* accent color */
+.nav-links a:hover {
+  color: #ff4da6;
 }
 
-/* Burger menu for mobile */
-.burger {
+/* ===== Menu Toggle (3 lines icon) ===== */
+.menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
 }
 
-.burger div {
+.menu-toggle div {
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background: #333;
+  margin: 4px 0;
+  transition: all 0.3s ease;
 }
 
-/* Responsive Navbar */
-@media screen and (max-width: 768px) {
+/* ===== Responsive Navbar ===== */
+@media (max-width: 768px) {
   .nav-links {
-    display: none;
-    flex-direction: column;
     position: absolute;
-    background-color: #fff;
     top: 70px;
     right: 0;
-    width: 200px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    display: none;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .burger {
+  .menu-toggle {
     display: flex;
   }
 }

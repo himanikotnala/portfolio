@@ -1,6 +1,7 @@
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
 
-burger.addEventListener('click', () => {
-  nav.classList.toggle('active');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
