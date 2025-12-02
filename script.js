@@ -18,4 +18,28 @@ skillLevels.forEach(skill => {
 
   skill.style.width = width;
 });
+// Portfolio Filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    // Remove active class from all buttons
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const category = btn.getAttribute('data-category');
+
+    projectCards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+  });
+});
+
 
